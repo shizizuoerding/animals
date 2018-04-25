@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script>
+    
+    // function test() {
+    // 	$.ajax({
+    //        type: "POST",
+    //        url: 'user/add',
+    //        data: {userName:'123ffdsd12',passWord:'ajdhdvfrfas',nickName:'好'},
+    //        dataType: "json",
+    //        success : function(result) {
+    //            console.log(result);
+    //        },
+    //        error : function(){
+    //        	console.log("出错");
+    //        }
+    //    });
+    // }
+    test();
+    // function test() {
+    // 	$.ajax({
+    //        type: "GET",
+    //        url: 'goods/list',
+    //        data: {},
+    //        dataType: "json",
+    //        success : function(result) {
+    //            console.log(result);
+    //        },
+    //        error : function(){
+    //        	console.log("出错");
+    //        }
+    //    });
+    // }
+    function test() {
+        var goodsPic = [{"url":"//img12.360buyimg.com/n1/jfs/t3421/201/1338073735/59495/4e069fa3/5823ddabNa028c77a.jpg"},{"url":"//img12.360buyimg.com/n1/jfs/t3814/20/1125195689/98997/f842b1be/5823ddb0Nb7fa39d2.jpg"},{"url":"//img12.360buyimg.com/n1/jfs/t3538/339/1405165474/64117/fdd04e29/5823ddb3N148b4312.jpg"},{"url":"//img12.360buyimg.com/n1/jfs/t3829/262/1116025052/77166/cf21eb00/5823ddb7Nbba4ef41.jpg"},{"url":"//img12.360buyimg.com/n1/jfs/t3673/262/1410703291/83493/6e968d1f/5823ddbcN78000f95.jpg"},{"url":"//img12.360buyimg.com/n1/jfs/t3688/238/1278043298/83806/9ae782c6/5823ddc2Naef70728.jpg"},{"url":"//img12.360buyimg.com/n1/jfs/t3838/282/1099299257/81894/31e22ba6/5823ddc7N2c084bf2.jpg"}];
+        goodsPic = JSON.stringify(goodsPic)
+      $.ajax({
+           type: "POST",
+           url: 'goods/add',
+           data: {goodsType:'数码',goodsName:'小米（MI）无人机1080P含云台机 自动起降 自动返航 自动绕点飞行 设定目的地自动规划航线 三轴机械防抖',goodsPrice:2999,goodsAmount:20,goodsSize:'大',rent:2,goodsPic:goodsPic,oriPrice:3000},
+           dataType: "json",
+           success : function(result) {
+               console.log(result);
+           },
+           error : function(){
+            console.log("出错");
+           }
+       });
+    }
+    // function test() {
+    //   $.ajax({
+    //        type: "GET",
+    //        url: 'grade/list',
+    //        data: {},
+    //        dataType: "json",
+    //        success : function(result) {
+    //            console.log(result);
+    //        },
+    //        error : function(){
+    //         console.log("出错");
+    //        }
+    //    });
+    // }
+</script>
+</body>
+</html>
