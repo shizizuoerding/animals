@@ -2,12 +2,27 @@
 <html>
   <head>
     <title>LeanEngine</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- <link rel="stylesheet" href="/stylesheets/style.css"> -->
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
   </head>
   <body>
-    <h1>LeanEngine</h1>
-    <p>这是 LeanEngine 的示例应用</p>
-    <p>当前时间：<%= currentTime %></p>
-    <p><a href="/todos">一个简单的「TODO 列表」示例</a></p>
+    <script type="text/javascript">
+    test();
+      function test() {
+        
+      $.ajax({
+           type: "POST",
+           url: 'user/signUp',
+           data: {userName:'nihaocsar',passWord:'nihao',birth:'111',sex:'nan',area:'dad'},
+           dataType: "json",
+           success : function(result) {
+               console.log(result);
+           },
+           error : function(){
+            console.log("出错");
+           }
+       });
+    }
+    </script>
   </body>
 </html>
